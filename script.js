@@ -67,3 +67,28 @@ function sortItems() {
 
   document.getElementById("q3_result").innerHTML = sortedNumbers;
 }
+
+//Questão 4
+function findPrimeNumbers() {
+  var stringNumbers = document.getElementById("q4").value;
+
+  var intNumbers =
+    stringNumbers
+      .split(",")
+      .map(number => { return parseInt(number); })
+      .filter(element => element === 0 || Number(element))
+    ;
+
+  const primeNumbers = intNumbers.filter(number => {
+    isPrime = true;
+    for (let comparator = 2; comparator < number; comparator++) {
+      if (number % comparator === 0) {
+        isPrime = false;
+      }
+    }
+
+    return isPrime;
+  });
+
+  document.getElementById("q4_result").innerHTML = primeNumbers;
+}

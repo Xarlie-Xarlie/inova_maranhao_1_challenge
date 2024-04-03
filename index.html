@@ -72,6 +72,26 @@
       <button class="action calculate" onclick="sortItems()">Ordenar</button>
       <button class="action clean" onclick="clearInputs(['q3']); clearInnerText(['q3_result'])">Limpar</button>
     </div>
+
+    <div class="question">
+      <label for="q4">4. Em uma pequena vila, o fazendeiro precisa separar os
+        números primos para determinar quantos novos campos plantar.
+        Ele pede sua ajuda para identificar esses números criando um algoritmo.
+        Os números são: 23, 16, 11, 8, 19, 14, 5, 21.
+      </label>
+      <label class="task">
+        Escreva um programa que retorne os números primos dado um array:
+      </label>
+      <input class="min_max_input" type="text" id="q4" name="q4"
+        placeholder="Digite os números separados por ','. 1, 2, 3, 4, 5, 100">
+      <label>Números Primos:
+        <p id="q4_result"></p>
+      </label>
+      <button class="action calculate" onclick="findPrimeNumbers()">Filtrar Números Primos</button>
+      <button class="action clean" onclick="clearInputs(['q4']); clearInnerText(['q4_result'])">Limpar</button>
+    </div>
+
+
   </div>
   <script src="script.js"></script>
 </body>

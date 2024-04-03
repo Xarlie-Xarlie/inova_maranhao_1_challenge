@@ -53,9 +53,13 @@ function findMinMax() {
 //Questão 3
 function sortItems() {
   var stringNumbers = document.getElementById("q3").value;
-  var intNumbers = stringNumbers.split(",").map(number => {
-    return parseInt(number);
-  });
+
+  var intNumbers =
+    stringNumbers
+      .split(",")
+      .map(number => { return parseInt(number); })
+      .filter(element => element === 0 || Number(element))
+    ;
 
   const sortedNumbers = intNumbers.sort((current, next) => {
     return current - next;

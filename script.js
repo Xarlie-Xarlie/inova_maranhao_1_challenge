@@ -99,7 +99,7 @@ function countWords() {
 
   var numberOfWords = phrases.split(/\s+/);
 
-  document.getElementById("q5_result").innerHTML = numberOfWords.length;
+  document.getElementById("q5_result").innerHTML = numberOfWords.length + " palavra(s)";
 }
 
 //Questão 6
@@ -127,5 +127,14 @@ function calculatePurchase() {
     return parseFloat(stringPrice);
   }).reduce((acc, current) => acc + current, 0);
 
-  document.getElementById("q7_result").innerHTML = total;
+  document.getElementById("q7_result").innerHTML = `R$ ${total}`.replace(".", ",");
+}
+
+//Questão 8
+function calculatePenalty() {
+  const days = document.getElementById("q8").value;
+  const penalty = parseInt(days) * 0.5;
+  if (!isNaN(penalty)) {
+    document.getElementById("q8_result").innerHTML = `R$ ${penalty}`.replace(".", ",");
+  }
 }

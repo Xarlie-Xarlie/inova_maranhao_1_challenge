@@ -157,3 +157,13 @@ function calculateDamage() {
     document.getElementById("q9_result").innerHTML = remainingHP;
   }
 }
+
+//Questão 10
+function countUppercase() {
+  const upperCaseRegex = /[A-Z]/g;
+  const inputValue = document.getElementById("q10").value;
+  const upperCaseLetters = inputValue.match(upperCaseRegex);
+
+  document.getElementById("q10_result").innerHTML = upperCaseLetters.length;
+}
+

@@ -182,6 +182,24 @@
       </button>
     </div>
 
+    <div class="question">
+      <label class="task">
+        10. Desenvolver um programa para contar o número de letras
+        maiúsculas da string abaixo: “LoReM IpSuM Is sImPlY
+        DuMmY TeXt oF ThE PrInTiNg aNd tYpEsEtTiNg iNdUsTrY”
+      </label>
+      <input class="min_max_input" type="text" id="q10" name="q10"
+        value="LoReM IpSuM Is sImPlY DuMmY TeXt oF ThE PrInTiNg aNd tYpEsEtTiNg iNdUsTrY"
+        placeholder="Quantidade de ataques">
+      <label>Quantidade de Letras Maiúsculas:
+        <p id="q10_result"></p>
+      </label>
+      <button class="action calculate" onclick="countUppercase()">Calcular Dano</button>
+      <button class="action clean" onclick="clearInputs(['q10']); clearInnerText(['q10_result'])">
+        Limpar
+      </button>
+    </div>
+
   </div>
   <script src="script.js"></script>
 </body>

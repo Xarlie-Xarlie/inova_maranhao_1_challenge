@@ -50,7 +50,9 @@
         <p id="q2_max"></p>
       </label>
       <button class="action calculate" onclick="findMinMax()">Encontrar</button>
-      <button class="action clean" onclick="clearInputs(['q2']); clearInnerText(['q2_min', 'q2_max'])">Limpar</button>
+      <button class="action clean" onclick="clearInputs(['q2']); clearInnerText(['q2_min', 'q2_max'])">
+        Limpar
+      </button>
     </div>
 
     <div class="question">
@@ -70,7 +72,9 @@
         <p id="q3_result"></p>
       </label>
       <button class="action calculate" onclick="sortItems()">Ordenar</button>
-      <button class="action clean" onclick="clearInputs(['q3']); clearInnerText(['q3_result'])">Limpar</button>
+      <button class="action clean" onclick="clearInputs(['q3']); clearInnerText(['q3_result'])">
+        Limpar
+      </button>
     </div>
 
     <div class="question">
@@ -88,7 +92,9 @@
         <p id="q4_result"></p>
       </label>
       <button class="action calculate" onclick="findPrimeNumbers()">Filtrar Números Primos</button>
-      <button class="action clean" onclick="clearInputs(['q4']); clearInnerText(['q4_result'])">Limpar</button>
+      <button class="action clean" onclick="clearInputs(['q4']); clearInnerText(['q4_result'])">
+        Limpar
+      </button>
     </div>
 
     <div class="question">
@@ -102,19 +108,40 @@
         <p id="q5_result"></p>
       </label>
       <button class="action calculate" onclick="countWords()">contar palavras</button>
-      <button class="action clean" onclick="clearInputs(['q5']); clearInnerText(['q5_result'])">Limpar</button>
+      <button class="action clean" onclick="clearInputs(['q5']); clearInnerText(['q5_result'])">
+        Limpar
+      </button>
     </div>
 
     <div class="question">
       <label class="task">
         6. Escreva um programa para encontrar o fatorial do número 12.
       </label>
-      <input class="numberinput" type="number" id="q6" value="12" name="q6" placeholder="Número">
       <label>Fatorial do número:
+        <input class="numberinput" type="number" id="q6" value="12" name="q6" placeholder="Número">
         <p id="q6_result"></p>
       </label>
       <button class="action calculate" onclick="calculateFactorial()">Fatorial</button>
-      <button class="action clean" onclick="clearInputs(['q6']); clearInnerText(['q6_result'])">Limpar</button>
+      <button class="action clean" onclick="clearInputs(['q6']);
+          clearInnerText(['q6_result'])">
+        Limpar
+      </button>
+    </div>
+
+    <div class="question">
+      <label class="task">
+        7.Em uma loja de conveniência, um cliente comprou três itens e
+        precisa calcular o total da compra. Os preços dos itens são
+        R$ 2,50, R$ 3,75 e R$ 1,99. Crie um algoritmo que retorne
+        o valor total.
+      </label>
+      <input class="min_max_input" type="text" value="R$ 2,50, R$ 3,75 e R$ 1,99" id="q7" name="q7"
+        placeholder="Preços devem ter o formato: R$ 1,11, R$ 22,22, R$ 333,33...">
+      <label>Total:
+        <p id="q7_result"></p>
+      </label>
+      <button class="action calculate" onclick="calculatePurchase()">Total</button>
+      <button class="action clean" onclick="clearInputs(['q7']); clearInnerText(['q7_result'])">Limpar</button>
     </div>
 
   </div>

@@ -107,11 +107,25 @@ function calculateFactorial() {
   var number = document.getElementById("q6").value;
   number = parseInt(number);
 
-  factorial = 1;
+  var factorial = 1;
 
   for (let acc = 1; acc <= number; acc++) {
     factorial = factorial * acc;
   }
 
   document.getElementById("q6_result").innerHTML = factorial;
+}
+
+//Questão 7
+function calculatePurchase() {
+  const regex = /R\$ \d+,\d\d/g;
+  const values = document.getElementById("q7").value;
+  const prices = values.match(regex);
+
+  const total = prices.map(price => {
+    stringPrice = price.replace("R$", "").replace(",", ".");
+    return parseFloat(stringPrice);
+  }).reduce((acc, current) => acc + current, 0);
+
+  document.getElementById("q7_result").innerHTML = total;
 }

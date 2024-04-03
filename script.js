@@ -92,3 +92,12 @@ function findPrimeNumbers() {
 
   document.getElementById("q4_result").innerHTML = primeNumbers;
 }
+
+//Questão 5
+function countWords() {
+  var phrases = document.getElementById("q5").value;
+
+  var numberOfWords = phrases.split(/\s+/);
+
+  document.getElementById("q5_result").innerHTML = numberOfWords.length;
+} 

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teste de Lógica</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Teste de Lógica</h1>
+    <div class="question">
+      <label>1. Imagine que você está criando um sistema escolar
+        para obter a média dos alunos da sala. Foram realizadas
+        3 avaliações com nota máxima de 10 pontos. Aline, tirou
+        na primeira nota o total de 8 pontos, na segunda nota
+        tirou 9 pontos e na terceira nota 7 pontos.
+      </label>
+      <label class="task"> Escreva um programa que receba as notas, faça o cálculo
+        da média e imprima o resultado final da média.</label>
+      <input class="numberinput" min=0 max=10 type="number" id="q1_1" name="q1_1" placeholder="Nota 1...">
+      <input class="numberinput" min=0 max=10 type="number" id="q1_2" name="q1_2" placeholder="Nota 2...">
+      <input class="numberinput" min=0 max=10 type="number" id="q1_3" name="q1_3" placeholder="Nota 3...">
+      <label>Media:
+        <p id="q1"></p>
+      </label>
+      <button class="action calculate" onclick="calculateAverage()">Calcular</button>
+      <button class="action clean"
+        onclick="clearInputs(['q1_1', 'q1_2', 'q1_3']); clearInnerText(['q1'])">Limpar</button>
+    </div>
+
+    <div class="question">
+      <label for="q1">2. Tais está participando de um sorteio na Loteria e
+        recebeu uma lista de números aleatórios para poder apostar.
+        Os números foram: 15, 8, 90, 75, 102, 6 e 2. Por ser bastante cautelosa,
+        ela gostaria de saber qual é o menor número e qual é o maior número.
+      </label>
+      <label class="task">Ajude Tais e escreva um programa que faça a lógica
+        de programação para organização dos números, receba os números
+        da lista e imprima na tela o menor número digitado e o maior número digitado.
+      </label>
+      <input class="min_max_input" type="text" id="q2" name="q2"
+        placeholder="Digite os números separados por ','. 1, 2, 3, 4, 5, 100">
+      <label>Mínimo:
+        <p id="q2_min"></p>
+      </label>
+      <label>Máximo:
+        <p id="q2_max"></p>
+      </label>
+      <button class="action calculate" onclick="findMinMax()">Encontrar</button>
+      <button class="action clean" onclick="clearInputs(['q2']); clearInnerText(['q2_min', 'q2_max'])">Limpar</button>
+    </div>
+
+    <div class="question">
+      <label for="q3">3. Havia uma antiga guilda de alquimistas que guardava
+        seus segredos em uma série de frascos numerados. No entanto, ao longo
+        dos anos, os frascos foram sendo desorganizados e agora os aprendizes
+        alquimistas precisam restaurar a ordem. Os números dos frascos representam
+        a idade dos alquimistas que os criaram. Eles devem ser ordenados em ordem
+        crescente para revelar um segredo alquímico há muito perdido. Mas, para isso,
+        os aprendizes devem usar suas habilidades em algoritmos de ordenação.
+      </label>
+      <label class="task">Escreva um programa que faça a ordenação dos frascos:
+        12, 5, 23, 17, 8, 14, 3, 19.</label>
+      <input class="min_max_input" type="text" id="q3" name="q3"
+        placeholder="Digite os números separados por ','. 1, 2, 3, 4, 5, 100">
+      <label>Array Ordenado:
+        <p id="q3_result"></p>
+      </label>
+      <button class="action calculate" onclick="sortItems()">Ordenar</button>
+      <button class="action clean" onclick="clearInputs(['q3']); clearInnerText(['q3_result'])">Limpar</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>

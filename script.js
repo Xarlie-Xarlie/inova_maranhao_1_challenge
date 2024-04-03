@@ -100,4 +100,18 @@ function countWords() {
   var numberOfWords = phrases.split(/\s+/);
 
   document.getElementById("q5_result").innerHTML = numberOfWords.length;
-} 
+}
+
+//Questão 6
+function calculateFactorial() {
+  var number = document.getElementById("q6").value;
+  number = parseInt(number);
+
+  factorial = 1;
+
+  for (let acc = 1; acc <= number; acc++) {
+    factorial = factorial * acc;
+  }
+
+  document.getElementById("q6_result").innerHTML = factorial;
+}

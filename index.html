@@ -117,8 +117,8 @@
       <label class="task">
         6. Escreva um programa para encontrar o fatorial do número 12.
       </label>
+      <input class="numberinput" type="number" id="q6" value="12" name="q6" placeholder="Número">
       <label>Fatorial do número:
-        <input class="numberinput" type="number" id="q6" value="12" name="q6" placeholder="Número">
         <p id="q6_result"></p>
       </label>
       <button class="action calculate" onclick="calculateFactorial()">Fatorial</button>
@@ -160,6 +160,24 @@
       </label>
       <button class="action calculate" onclick="calculatePenalty()">Calcular Multa</button>
       <button class="action clean" onclick="clearInputs(['q8']); clearInnerText(['q8_result'])">
+        Limpar
+      </button>
+    </div>
+
+    <div class="question">
+      <label class="task">
+        9. Em um jogo de RPG, o personagem do jogador possui pontos de
+        vida (HP) que são reduzidos quando ele sofre danos dos inimigos.
+        Seu personagem começa com 100 pontos de vida e sofre danos de 20
+        pontos em um ataque. Crie um algoritmo informando quantos
+        pontos de vida restarão após três ataques?
+      </label>
+      <input class="numberinput" type="number" id="q9" name="q9" value="3" placeholder="Quantidade de ataques">
+      <label>HP Restante:
+        <p id="q9_result"></p>
+      </label>
+      <button class="action calculate" onclick="calculateDamage()">Calcular Dano</button>
+      <button class="action clean" onclick="clearInputs(['q9']); clearInnerText(['q9_result'])">
         Limpar
       </button>
     </div>

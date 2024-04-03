@@ -138,3 +138,22 @@ function calculatePenalty() {
     document.getElementById("q8_result").innerHTML = `R$ ${penalty}`.replace(".", ",");
   }
 }
+
+//Questão 9
+function calculateDamage() {
+  const playerLife = 100;
+  const damagePerAttack = 20;
+  const inputValue = document.getElementById("q9").value;
+  const numberOfAttacks = parseInt(inputValue);
+
+  const remainingHP = playerLife - numberOfAttacks * damagePerAttack;
+
+  if (numberOfAttacks < 0) {
+    document.getElementById("q9_result").innerHTML = 100;
+  }
+  else if (remainingHP < 0) {
+    document.getElementById("q9_result").innerHTML = 0;
+  } else {
+    document.getElementById("q9_result").innerHTML = remainingHP;
+  }
+}

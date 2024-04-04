@@ -167,3 +167,18 @@ function countUppercase() {
   document.getElementById("q10_result").innerHTML = upperCaseLetters.length;
 }
 
+//Questão 11
+function calculateAge() {
+  const inputValue = document.getElementById("q11").value;
+  const [year, month, day] = inputValue.split("-").map(Number);
+  const today = new Date();
+  const birthDate = new Date(year, month - 1, day); // Month is 0-based
+  let age = today.getFullYear() - birthDate.getFullYear();
+
+  // Adjust for birth month and day
+  if (today.getMonth() < birthDate.getMonth() || (today.getMonth() === birthDate.getMonth() && today.getDate() < birthDate.getDate())) {
+    age--;
+  }
+
+  document.getElementById("q11_result").innerHTML = age + " Anos";
+}

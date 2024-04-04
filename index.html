@@ -190,12 +190,29 @@
       </label>
       <input class="min_max_input" type="text" id="q10" name="q10"
         value="LoReM IpSuM Is sImPlY DuMmY TeXt oF ThE PrInTiNg aNd tYpEsEtTiNg iNdUsTrY"
-        placeholder="Quantidade de ataques">
+        placeholder="Escreva seu texto aqui">
       <label>Quantidade de Letras Maiúsculas:
         <p id="q10_result"></p>
       </label>
-      <button class="action calculate" onclick="countUppercase()">Calcular Dano</button>
+      <button class="action calculate" onclick="countUppercase()">Contar Letras</button>
       <button class="action clean" onclick="clearInputs(['q10']); clearInnerText(['q10_result'])">
+        Limpar
+      </button>
+    </div>
+
+    <div class="question">
+      <label class="task">
+        11. Crie uma lógica para calcular a idade de uma pessoa.
+        Essa lógica deverá receber um valor de ano de nascimento
+        no formato “yyyy-mm-dd” e deverá retornar o número da
+        idade da pessoa como resultado.
+      </label>
+      <input class="min_max_input" type="text" id="q11" name="q11" value="1999-10-31" placeholder="Idade: yyyy-mm-dd">
+      <label>Sua idade é:
+        <p id="q11_result"></p>
+      </label>
+      <button class="action calculate" onclick="calculateAge()">Calcular Idade</button>
+      <button class="action clean" onclick="clearInputs(['q11']); clearInnerText(['q11_result'])">
         Limpar
       </button>
     </div>
